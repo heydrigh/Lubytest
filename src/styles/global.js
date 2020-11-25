@@ -8,8 +8,16 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body {
+    background: #292929;
+  }
+
   button {
     cursor: pointer;
   }
 
+  #root {
+    max-width: 375px;
+    margin: 0 auto;
+  }
 `;
