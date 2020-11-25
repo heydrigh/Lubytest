@@ -6,6 +6,7 @@ import Dashboard from '../pages/dashboard';
 import Following from '../pages/following';
 import Followers from '../pages/followers';
 import Repos from '../pages/repos';
+import Details from '../pages/details';
 
 const Routes = () => (
   <Switch>
@@ -14,6 +15,7 @@ const Routes = () => (
     <Route path="/following" component={Following} />
     <Route path="/followers" component={Followers} />
     <Route path="/repos" component={Repos} />
+    <Route path="/details/:username+" component={Details} />
   </Switch>
 );
 

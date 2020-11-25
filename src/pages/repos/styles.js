@@ -33,7 +33,6 @@ export const Header = styled.header`
   width: 100vw;
   position: absolute;
   background: #1f1f1f;
-  align-content: center;
   text-align: center;
   padding-top: 27px;
   padding-bottom: 20px;
@@ -45,7 +44,7 @@ export const Header = styled.header`
   a {
     text-decoration: none;
     color: #fff;
-    margin-right: 10%;
+    margin-right: 20px;
   }
 `;
 
