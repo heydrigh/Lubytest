@@ -6,7 +6,7 @@ const AuthContext = createContext({});
 
 export default function AuthProvider({ children }) {
   const [data, setData] = useState(() => {
-    const user = localStorage.getItem('@Github:users');
+    let user = localStorage.getItem('@Github:users');
 
     if (user) {
       return { user: JSON.parse(user) };
@@ -17,26 +17,21 @@ export default function AuthProvider({ children }) {
 
   const signOut = useCallback(() => {
     localStorage.removeItem('@Github:users');
-    Redirect('/');
+
     setData({});
+    Redirect('/');
   }, []);
 
-  const signIn = useCallback(async ({ login }) => {
-    const response = await api.get(`users/${login}`, {
-      login,
-    });
+  // const signIn = useCallback(async setData => {
+  //   const user = setData.data;
 
-    const user = response.data;
+  //   localStorage.setItem('@Github:users', JSON.stringify(user));
 
-    console.log(user);
-
-    localStorage.setItem('@Github:users', JSON.stringify(user));
-
-    setData({ user });
-  }, []);
+  //   setData({ user });
+  // }, []);
 
   return (
-    <AuthContext.Provider value={{ data, signOut }}>
+    <AuthContext.Provider value={{ data, setData, signOut }}>
       {children}
     </AuthContext.Provider>
   );

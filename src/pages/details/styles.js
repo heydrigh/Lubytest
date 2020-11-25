@@ -5,14 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  button {
-    position: fixed;
-    border: 0;
-    background: none;
-    color: #ffffff;
-    align-self: flex-end;
-    margin-top: 28px;
-  }
+
   img {
     width: 115px;
     height: 115px;
@@ -24,6 +17,23 @@ export const Container = styled.div`
   a {
     text-decoration: none;
     color: #ffffff;
+  }
+`;
+
+export const Header = styled.header`
+  align-items: center;
+  justify-content: center;
+  a {
+    position: absolute;
+    padding-top: 30px;
+  }
+
+  button {
+    border: 0;
+    background: none;
+    color: #ffffff;
+    margin-top: 28px;
+    float: right;
   }
 `;
 
