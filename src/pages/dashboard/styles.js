@@ -58,7 +58,7 @@ export const NumbersContainer = styled.div`
 `;
 
 export const Followers = styled.div`
-  margin-left: 16px;
+  margin-left: 31px;
 `;
 
 export const Following = styled.div`
