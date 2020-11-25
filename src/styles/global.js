@@ -10,6 +10,7 @@ export default createGlobalStyle`
 
   body {
     background: #292929;
+    overflow-x: hidden
   }
 
   button {

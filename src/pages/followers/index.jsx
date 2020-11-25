@@ -2,8 +2,8 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-function followers() {
+function Followers() {
   return <h1>Followers</h1>;
 }
 
-export default followers;
+export default Followers;
