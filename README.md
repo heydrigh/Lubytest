@@ -14,6 +14,6 @@ This project uses the Github API.
 - You can click in the right arrow to see a user details.
 
 ### This project uses:
--ReactJS(hooks and context API)
--Styled Components.
+- ReactJS(hooks and context API).
+- Styled Components.
 
