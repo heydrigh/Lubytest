@@ -5,6 +5,7 @@ import React, {
   useEffect,
   useCallback,
 } from 'react';
+import { Redirect } from 'react-router-dom';
 import api from '../services/api';
 
 const AuthContext = createContext({});
@@ -22,7 +23,7 @@ export default function AuthProvider({ children }) {
 
   const signOut = useCallback(() => {
     localStorage.removeItem('@Github:users');
-
+    Redirect('/');
     setData({});
   }, []);
 
@@ -41,7 +42,9 @@ export default function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ data }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ data, signOut }}>
+      {children}
+    </AuthContext.Provider>
   );
 }
 
